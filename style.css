@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ESTILOS GERAIS */
+body {
+    background-color: #FAFAFA;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 20px;
+}
+/* CONTAINER PRINCIPAL */
+.container {
+    display: flex; /* Alinha os elementos lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 30px; /* Espaço entre as caixas */
+    max-width: 935px;
+}
+
+/* CAIXA DIREITA */
+.caixa-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaço entre os blocos */
+    width: 350px;
+}
+
+/* CAIXA DE IMAGENS */
+.caixa-imagens {
+    position: relative;
+    width: 400px;
+    height: 580px;
+    overflow: hidden;
+}
+.imagem-celular {
+    width: 110%;
+    height: auto;
+}
+/* TROCA DE IMAGENS */
+.troca-imagem {
+    position: absolute;
+    top: 20px;
+    left: 144px; /* Ajusta para centralizar dentro do celular */
+    width: 247px; /* Largura ajustada ao espaço interno do celular */
+    height: 526px;
+    overflow: hidden;
+}
+.imagem-insta {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Inicia invisível */
+    transition: opacity 1s ease-in-out; /* Transição suave */
+}
+.imagem-insta.ativo {
+    opacity: 1; /* Imagem visível */
+}
+/* CAIXA DO FORMULÁRIO */
+.caixa-form {
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 1px; /* Borda levemente arredondada */
+    align-items: center;
+}
+.insta-logo {
+    margin-bottom: 20px;
+    width: 200px;
+    max-width: 100%; /* Garante que não ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+input {
+    width: 100%;
+    height: 36px;
+    margin-top: 6px;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    font-size: 12px;
+    background-color: #fafafa;
+}
+button {
+    width: 100%;
+    height: 32px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+.ou {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+    width: 100%;
+}
+.ou span {
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+.ou p {
+    margin: 0 10px;
+    font-size: 12px;
+    color: #8e8e8e;
+    font-weight: 600;
+}
+.login-facebook,
+.esqueceu-senha {
+    font-size: 14px;
+    color: #385185;
+    text-align: center;
+    margin-top: 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.esqueceu-senha {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* CAIXA DE CADASTRO */
+.cadastro-box {
+    background-color: #ffffff;
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    text-align: center;
+    border-radius: 1px;
+    margin-top: 10px;
+}
+.cadastro-box p {
+    font-size: 14px;
+}
+.cadastro-box a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CAIXA DE APPS */
+.obtenha-app {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.obtenha-app p {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #262626;
+}
+.icones-app {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.icones-app img {
+    width: 136px;
+    height: auto;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 875px) {
+    .caixa-imagens {
+        display: none;
+    }
+    
+    .container {
+        justify-content: center;
+    }
+}
